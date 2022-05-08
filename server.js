@@ -153,7 +153,7 @@ app.post('/user-feedback',async(req,res)=>{
 app.post('/user-send-message',async(req,res)=>{
     try{
         const user = await User.create(req.body)
-        const respone = await fast2sms.sendMessage({authorization : process.env.API_KEY , message :req.body.message, numbers : [8898699498]})
+        const respone = await fast2sms.sendMessage({authorization : process.env.API_KEY , message :req.body.message, numbers : [7021595850]})
         res.status(200).send(respone).json(user)
     }catch(err) {
         console.error(err);
